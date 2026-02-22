@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Design x Strategy | Systems for Fat Loss Coaches</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a6f20d",
+                        "background-light": "#f7f8f5",
+                        "background-dark": "#1c2210",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(166, 242, 13, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<!-- Top Bar -->
+<header class="fixed top-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">terminal</span>
+<span class="font-display font-bold text-lg tracking-tight uppercase">Design x Strategy</span>
+</div>
+<div class="h-2 w-2 rounded-full bg-primary animate-pulse"></div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center pt-24 pb-12 px-6 overflow-hidden">
+<div class="absolute top-20 right-[-10%] w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-10 left-[-10%] w-80 h-80 bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="max-w-4xl mx-auto text-center z-10">
+<h1 class="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tight mb-6">
+                Stop Chasing Clients in DMs. <br/>
+<span class="text-primary">Build a System That Closes Them.</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto font-medium">
+                High-authority web systems built specifically for fat loss coaches who want premium, high-ticket clients on autopilot.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+<button class="w-full sm:w-auto px-8 py-4 bg-primary text-background-dark font-bold rounded-lg text-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
+                    Book Free Strategy Call
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button 
+    onclick="window.location.href='vid.html';" 
+    class="w-full sm:w-auto px-8 py-4 border border-primary/30 text-white font-bold rounded-lg text-lg hover:bg-primary/5 transition-all">
+    See My Work
+</button>
+</div>
+<div class="relative mx-auto max-w-[800px] mt-8 group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary/20 to-transparent rounded-xl blur opacity-25"></div>
+<div class="relative bg-zinc-900 rounded-xl border border-white/10 p-2 shadow-2xl">
+<img alt="Modern Web Dashboard Mockup" class="rounded-lg w-full aspect-[16/10] object-cover opacity-90 group-hover:opacity-100 transition-duration-500" data-alt="Clean minimalist fitness dashboard UI on laptop screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL_To-410cLa-qW_b_qKg5gj4Yx7u5fsz3gwPiEXg0mjizXUSEWBvT7UyFmoawGshTqnU-A6yr6RcvO1OtPcK2rO2BlqpbMF92lmACNI6IhoZqXYYwd_2F9FbFMKAfbM29C6p2bVBCpAkCD-FK5DLxs8kLcTdwVQEBlsb0WLiOH2g1e3l_V0s7PL6IYRjiEjaLynhLh8xSMgiBbqXcQk7t36gczwoKT4fRJZqgOESu-L56XlYvu8v_bexFX3sJ3yMwpN2Jw0OwbQ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="py-24 px-6 bg-zinc-900/30">
+<div class="max-w-xl mx-auto"><h2 class="text-3xl font-bold mb-10 text-center">Instagram Isn’t a Sales System.</h2>
+<div class="glass-card rounded-2xl p-6 md:p-8 space-y-6 max-w-md mx-auto border-white/5 shadow-2xl">
+<!-- Chat Bubble 1 -->
+<div class="flex justify-start">
+<div class="bg-zinc-800 text-slate-200 p-4 rounded-2xl rounded-tl-none max-w-[85%] text-sm md:text-base border border-white/5">
+            Hey coach! 👋 Love your content. How much for coaching?
+        </div>
+</div>
+<!-- Chat Bubble 2 -->
+<div class="flex justify-end">
+<div class="bg-primary/20 text-primary p-4 rounded-2xl rounded-tr-none max-w-[85%] text-sm md:text-base border border-primary/20">
+            Hey! Thanks for reaching out. My program is $3k for 12 weeks.
+        </div>
+</div>
+<!-- Chat Bubble 3 -->
+<div class="flex justify-start">
+<div class="bg-zinc-800 text-slate-200 p-4 rounded-2xl rounded-tl-none max-w-[85%] text-sm md:text-base border border-white/5">
+            Oh... that's too expensive for me right now. Can I get a discount?
+        </div>
+</div>
+<!-- Status Indicator -->
+<div class="flex items-center justify-center gap-2 pt-4 border-t border-white/5">
+<span class="material-symbols-outlined text-red-500 text-lg">block</span>
+<span class="text-red-500 font-mono text-xs uppercase tracking-widest">Lead Lost: Price Objection</span>
+</div>
+</div>
+<p class="text-center text-slate-400 mt-8 text-sm md:text-base font-medium">This is what happens when you lack a high-authority system that pre-qualifies for you.</p></div>
+</section>
+<!-- Solution Section -->
+<section class="py-24 px-6">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">The Solution</span>
+<h2 class="text-3xl md:text-4xl font-bold mt-2">Your Website Should Do the Selling.</h2>
+</div>
+<div class="grid gap-6 md:grid-cols-1">
+<div class="glass-card p-8 rounded-xl flex flex-col md:flex-row md:items-center gap-6 group hover:border-primary/40 transition-all">
+<div class="w-14 h-14 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Pre-Qualify Clients</h3>
+<p class="text-slate-400">Automated vetting forms ensure you only talk to people who can afford your coaching.</p>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl flex flex-col md:flex-row md:items-center gap-6 group hover:border-primary/40 transition-all">
+<div class="w-14 h-14 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">workspace_premium</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Build Authority</h3>
+<p class="text-slate-400">Custom design that positions you as the #1 expert in your fat loss niche.</p>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl flex flex-col md:flex-row md:items-center gap-6 group hover:border-primary/40 transition-all">
+<div class="w-14 h-14 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">leaderboard</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Show Transformations</h3>
+<p class="text-slate-400">Strategic case study layouts that turn skepticism into trust instantly.</p>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl flex flex-col md:flex-row md:items-center gap-6 group hover:border-primary/40 transition-all">
+<div class="w-14 h-14 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">touch_app</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Guide to Apply</h3>
+<p class="text-slate-400">High-conversion CTA paths that lead clients straight to your calendar.</p>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl flex flex-col md:flex-row md:items-center gap-6 group hover:border-primary/40 transition-all">
+<div class="w-14 h-14 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Increase Prices</h3>
+<p class="text-slate-400">Premium presentation justifies premium pricing. No more haggling over $50/mo.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Proof Section -->
+<section class="py-24 px-6 bg-zinc-900/50">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-3xl font-bold mb-16 text-center">Built for Coaches Who Want to Scale</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group">
+<div class="overflow-hidden rounded-xl mb-4 border border-white/5 aspect-[4/5] bg-zinc-800">
+<img alt="Elite Performance Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Fitness mobile website showing a muscular athlete" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPlbCOF3hE8_43OD-axP8Cyl_oOdkDO7QKyg_B9_0kOq9gBONkTJpZRgetOiINiETB_ocivn6MQBNwhQldKzvJqi8cLeiVG9WP_oIN_PzoeWIqRsetkZ3vJOjIOEYU01lGaUbkACbLiV0f6t-iSQ1nytW1g9edoavHTY21gJdd7IhJ-vpk4XenLFw4TPMZYYzkqBk6RHBklHraEM_5xSZqhA_6yazXBMgFWuIBDA3-zShuCW8HgjYQfbVlAH1GUehMj2KkeFKgoA"/>
+</div>
+<h3 class="text-xl font-bold">Elite Performance Academy</h3>
+<p class="text-primary font-medium">Outcome: +240% Inbound Lead Quality</p>
+</div>
+<div class="group">
+<div class="overflow-hidden rounded-xl mb-4 border border-white/5 aspect-[4/5] bg-zinc-800">
+<img alt="Modern Strength Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Modern minimalist gym interior coaching page" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf2dZgpQuoTvdmZ6eIHx2_87FeOKUBL7XDGs-e-llR5TpVgwht5hcDe9XPuttlz-5RFFQ4Ln67kvapSDE76IV1EAo8uYehB5VDmPKchO9u0wBB47cH77qb6Qw9wTbqKNfNL0MZ7uBuH6qI2tljoZD0aXsEm-9ruvO_wwjcPExcQTAH1N_0-ml3dQdo56xycz2T4BO_ZFwOpdu-TKeA-bMSZ2Vz9RQbPDa2zXnWV41NWDvNswdw2R2uBVbYLVqmTpfC84AJHYcOgA"/>
+</div>
+<h3 class="text-xl font-bold">Modern Strength Systems</h3>
+<p class="text-primary font-medium">Outcome: $12k Added MRR in 60 Days</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-24 px-6 bg-zinc-900/20">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">The Infrastructure</span>
+<h2 class="text-4xl md:text-5xl font-black mt-2">The High-Ticket Machine</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
+<!-- Traffic Source -->
+<div class="glass-card p-8 rounded-2xl text-center border-white/10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">campaign</span>
+<h3 class="text-lg font-bold">Traffic Source</h3>
+<p class="text-slate-400 text-sm mt-1">Ads / Organic</p>
+</div>
+<!-- Arrow Desktop -->
+<div class="hidden md:flex justify-center">
+<span class="material-symbols-outlined text-primary/30">arrow_forward</span>
+</div>
+<!-- Arrow Mobile -->
+<div class="flex md:hidden justify-center py-2">
+<span class="material-symbols-outlined text-primary/30">arrow_downward</span>
+</div>
+<!-- Authority Page -->
+<div class="glass-card p-8 rounded-2xl text-center border-white/10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">web</span>
+<h3 class="text-lg font-bold">Authority Page</h3>
+<p class="text-slate-400 text-sm mt-1">Pre-Sells &amp; VSL</p>
+</div>
+<!-- Arrow Desktop -->
+<div class="hidden md:flex justify-center">
+<span class="material-symbols-outlined text-primary/30">arrow_forward</span>
+</div>
+<!-- Arrow Mobile -->
+<div class="flex md:hidden justify-center py-2">
+<span class="material-symbols-outlined text-primary/30">arrow_downward</span>
+</div>
+<!-- Application -->
+<div class="glass-card p-8 rounded-2xl text-center border-white/10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">assignment_turned_in</span>
+<h3 class="text-lg font-bold">Application</h3>
+<p class="text-slate-400 text-sm mt-1">Filters Tire-Kickers</p>
+</div>
+<!-- Arrow Desktop -->
+<div class="hidden md:flex justify-center">
+<span class="material-symbols-outlined text-primary/30">arrow_forward</span>
+</div>
+<!-- Arrow Mobile -->
+<div class="flex md:hidden justify-center py-2">
+<span class="material-symbols-outlined text-primary/30">arrow_downward</span>
+</div>
+<!-- Qualified Call -->
+<div class="bg-primary p-8 rounded-2xl text-center shadow-[0_0_30px_rgba(166,242,13,0.2)]">
+<span class="material-symbols-outlined text-background-dark text-4xl mb-4">handshake</span>
+<h3 class="text-lg font-bold text-background-dark">Qualified Call</h3>
+<p class="text-background-dark/80 text-sm mt-1">High-Ticket Close</p>
+</div>
+</div>
+</div>
+</section><section class="py-24 px-6">
+<div class="max-w-xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-3xl font-bold">Simple. Strategic. Done.</h2>
+<p class="text-slate-400 mt-4">Your system launched in under 21 days.</p>
+</div>
+<div class="relative">
+<div class="absolute left-7 top-0 bottom-0 w-[2px] bg-primary/20"></div>
+<div class="space-y-16">
+<div class="relative flex gap-10 items-start">
+<div class="w-14 h-14 rounded-full bg-background-dark border-2 border-primary shrink-0 flex items-center justify-center z-10">
+<span class="text-primary font-bold">01</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Strategy</h3>
+<p class="text-slate-400">Deep dive into your niche, offer, and ideal high-ticket client avatar.</p>
+</div>
+</div>
+<div class="relative flex gap-10 items-start">
+<div class="w-14 h-14 rounded-full bg-background-dark border-2 border-primary/30 shrink-0 flex items-center justify-center z-10">
+<span class="text-primary/50 font-bold">02</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Plan</h3>
+<p class="text-slate-400">Map out the conversion funnel and content structure for authority.</p>
+</div>
+</div>
+<div class="relative flex gap-10 items-start">
+<div class="w-14 h-14 rounded-full bg-background-dark border-2 border-primary/30 shrink-0 flex items-center justify-center z-10">
+<span class="text-primary/50 font-bold">03</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Build</h3>
+<p class="text-slate-400">High-performance development with mobile-first optimization.</p>
+</div>
+</div>
+<div class="relative flex gap-10 items-start">
+<div class="w-14 h-14 rounded-full bg-primary shrink-0 flex items-center justify-center z-10 shadow-[0_0_20px_rgba(166,242,13,0.4)]">
+<span class="material-symbols-outlined text-background-dark">rocket_launch</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Launch</h3>
+<p class="text-slate-400">The system goes live. We start filtering your traffic into applications.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="mx-6 mb-24">
+<div class="max-w-4xl mx-auto bg-primary rounded-2xl p-10 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-primary/20">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[120px] -rotate-12">trending_up</span>
+</div>
+<h2 class="text-background-dark text-3xl md:text-5xl font-black mb-8 leading-tight">
+                Ready to Build a Client Acquisition System?
+            </h2>
+<p class="text-background-dark/80 text-lg font-bold mb-10 max-w-lg mx-auto">
+                Stop guessing and start scaling. Let's see if we're a fit for your fitness business.
+            </p>
+<button class="px-10 py-5 bg-background-dark text-primary font-black rounded-xl text-xl hover:scale-105 transition-transform flex items-center justify-center gap-3 mx-auto">
+                Book Your Free Strategy Call
+                <span class="material-symbols-outlined">calendar_month</span>
+</button>
+<p class="mt-6 text-background-dark/60 font-medium text-sm">
+                *Only 2 spots remaining for this month
+            </p>
+</div>
+</section>
+</body></html>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Project Showcase | Design x Strategy Theme</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#a6f20d",
+        "background-dark": "#1c2210"
+      },
+      fontFamily: {
+        display: ["Manrope", "sans-serif"]
+      }
+    }
+  }
+}
+</script>
+
+<style>
+body {
+  font-family: 'Manrope', sans-serif;
+}
+.glass-card {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(166,242,13,0.1);
+}
+</style>
+</head>
+
+<body class="bg-background-dark text-slate-100 min-h-screen p-8 overflow-x-hidden">
+
+<div class="max-w-6xl mx-auto">
+
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-12">
+    <div class="flex items-center gap-3">
+      <div class="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+      <h1 class="text-xl font-extrabold tracking-wide uppercase">
+        Developer Showcase
+      </h1>
+    </div>
+  </div>
+
+  <!-- Video Section -->
+  <div class="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl mb-8">
+    <video controls preload="metadata" id="videoPlayer"
+      class="w-full h-[400px] object-contain bg-black">
+      <source id="videoSource" src="1.mp4" type="video/mp4"/>
+    </video>
+  </div>
+
+  <!-- Title -->
+  <div class="text-center mb-10">
+    <h2 id="title" class="text-3xl md:text-4xl font-extrabold"></h2>
+    <p id="category" class="text-primary tracking-widest text-sm mt-2 uppercase"></p>
+  </div>
+
+  <!-- Info Grid -->
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <!-- Pricing -->
+    <div class="glass-card p-6 rounded-xl">
+      <h3 class="text-sm font-semibold mb-4 text-primary uppercase tracking-wide">
+        Project Cost
+      </h3>
+      <p id="price" class="text-xl font-bold"></p>
+    </div>
+
+    <!-- Review -->
+    <div class="glass-card p-6 rounded-xl">
+      <h3 class="text-sm font-semibold mb-4 text-primary uppercase tracking-wide">
+        Client Review
+      </h3>
+      <p id="reviewerName" class="font-bold text-lg"></p>
+      <p class="text-primary mt-1">★★★★★</p>
+      <p id="reviewText" class="text-slate-400 text-sm mt-3"></p>
+    </div>
+
+    <!-- Details -->
+    <div class="glass-card p-6 rounded-xl space-y-3">
+      <h3 class="text-sm font-semibold mb-4 text-primary uppercase tracking-wide">
+        Project Details
+      </h3>
+
+      <p class="flex justify-between text-sm">
+        <span class="text-slate-400">Live Link:</span>
+        <a id="liveLink" href="#" target="_blank"
+           class="text-primary font-semibold hover:underline">
+           Visit
+        </a>
+      </p>
+
+      <p class="flex justify-between text-sm">
+        <span class="text-slate-400">Technology:</span>
+        <span id="technology" class="font-semibold"></span>
+      </p>
+
+      <p class="flex justify-between text-sm">
+        <span class="text-slate-400">Duration:</span>
+        <span id="duration" class="font-semibold"></span>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Navigation -->
+  <div class="flex justify-center gap-6 mt-12">
+    <button onclick="prevVideo()"
+      class="px-6 py-3 border border-primary/30 rounded-xl hover:bg-primary/10 transition">
+      ← Previous
+    </button>
+
+    <button onclick="nextVideo()"
+      class="px-6 py-3 bg-primary text-background-dark font-bold rounded-xl hover:brightness-110 transition">
+      Next →
+    </button>
+  </div>
+
+</div>
+
+<script>
+const videos = [
+  {
+    src: "1.mp4",
+    title: "Portfolio Website",
+    category: "Web Development",
+    price: "₹6,000 - ₹10,000",
+    reviewer: "Hacr.rr09",
+    review: "Clean UI, fast delivery, excellent responsiveness!",
+    liveLink: "https://smartypie112.github.io/hacr.rr09/",
+    technology: "HTML, CSS, JavaScript, TailwindCSS",
+    duration: "2 Days"
+  },
+  {
+    src: "2.mp4",
+    title: "Business Website",
+    category: "Fullstack Build",
+    price: "₹20,000 - ₹25,000",
+    reviewer: "Ronit",
+    review: "Super smooth animations and mobile-first layout!",
+    liveLink: "https://instituteos.netlify.app",
+    technology: "ReactJS, Tailwind, NodeJS, ExpressJS",
+    duration: "8 Days"
+  },
+  {
+    src: "3.mp4",
+    title: "Music Producer Website",
+    category: "Frontend Build",
+    price: "₹6,000 - ₹8,000",
+    reviewer: "RGDEAGLE",
+    review: "Frontend perfectly synced, great admin panel.",
+    liveLink: "https://rgdeagle.netlify.app/",
+    technology: "React, MongoDB, Bootstrap",
+    duration: "2 Days"
+  },
+  {
+    src: "4.mp4",
+    title: "Customer Management Website",
+    category: "Fullstack Build",
+    price: "₹20,000 - ₹25,000",
+    reviewer: "Waari Library",
+    review: "Good work, will recommend to friends too.",
+    liveLink: "https://smartypie112.github.io/Library/",
+    technology: "ExpressJS, NodeJS, MongoDB",
+    duration: "6 Days"
+  }
+];
+
+let currentIndex = localStorage.getItem("videoIndex") || 0;
+
+function updateDisplay() {
+  const v = videos[currentIndex];
+
+  document.getElementById("videoSource").src = v.src;
+  document.getElementById("videoPlayer").load();
+
+  document.getElementById("title").innerText = v.title;
+  document.getElementById("category").innerText = v.category;
+  document.getElementById("price").innerText = v.price;
+  document.getElementById("reviewerName").innerText = v.reviewer;
+  document.getElementById("reviewText").innerText = '"' + v.review + '"';
+  document.getElementById("liveLink").href = v.liveLink;
+  document.getElementById("technology").innerText = v.technology;
+  document.getElementById("duration").innerText = v.duration;
+
+  localStorage.setItem("videoIndex", currentIndex);
+}
+
+function nextVideo() {
+  currentIndex = (parseInt(currentIndex) + 1) % videos.length;
+  updateDisplay();
+}
+
+function prevVideo() {
+  currentIndex = (parseInt(currentIndex) - 1 + videos.length) % videos.length;
+  updateDisplay();
+}
+
+updateDisplay();
+</script>
+
+</body>
+</html>

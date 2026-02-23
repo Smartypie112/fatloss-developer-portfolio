@@ -135,7 +135,8 @@ const videos = [
     category: "Design Sample",
     price: "₹5,000",
     outcome: "Conversion rate increase 5% to 20%",
-    duration: "2 Days"
+    duration: "2 Days",
+   liveLink: "https://fatloss-landing-page-1.netlify.app/",
   },
   {
     type: "work",
@@ -191,17 +192,21 @@ function updateDisplay() {
 
   document.getElementById("outcome").innerText = v.outcome || "";
 
-  if (v.type === "sample") {
-    document.getElementById("reviewCard").classList.add("hidden");
-    document.getElementById("liveLinkRow").classList.add("hidden");
-  } else {
+  // 🔹 Handle Review
+  if (v.reviewer && v.review) {
     document.getElementById("reviewCard").classList.remove("hidden");
-    document.getElementById("liveLinkRow").classList.remove("hidden");
+    document.getElementById("reviewerName").innerText = v.reviewer;
+    document.getElementById("reviewText").innerText = '"' + v.review + '"';
+  } else {
+    document.getElementById("reviewCard").classList.add("hidden");
+  }
 
-    document.getElementById("reviewerName").innerText = v.reviewer || "";
-    document.getElementById("reviewText").innerText =
-      v.review ? '"' + v.review + '"' : "";
-    document.getElementById("liveLink").href = v.liveLink || "#";
+  // 🔹 Handle Live Link (Show if exists)
+  if (v.liveLink) {
+    document.getElementById("liveLinkRow").classList.remove("hidden");
+    document.getElementById("liveLink").href = v.liveLink;
+  } else {
+    document.getElementById("liveLinkRow").classList.add("hidden");
   }
 
   localStorage.setItem("videoIndex", currentIndex);
